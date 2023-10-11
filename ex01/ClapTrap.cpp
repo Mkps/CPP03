@@ -34,7 +34,6 @@ ClapTrap	&ClapTrap::operator =(ClapTrap const &rhs)
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << this->_name << " goes away..." << std::endl;
-
 }
 
 void	ClapTrap::msgNoEnergy(void) const
@@ -44,7 +43,7 @@ void	ClapTrap::msgNoEnergy(void) const
 
 void	ClapTrap::msgNoHP(void) const
 {
-	std::cout << this->_name << " is passed out and can no longer fight..." << std::endl;
+	std::cout << this->_name << " is passed out and can no longer move..." << std::endl;
 }
 
 void	ClapTrap::attack(std::string const & target)
@@ -76,6 +75,13 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "ClapTrap " << this->getName() << " has taken ";
 	std::cout << amount << " points of damage!" << std::endl;
 	this->_hitP -= amount;
+}
+
+void	ClapTrap::showStatus(void) const
+{
+	std::cout << "ClapTrap " << this->getName() ;
+	std::cout << " HP: "<< this->getHP();
+	std::cout << " Energy: "<< this->getEnergy() << std::endl;
 }
 
 bool	ClapTrap::canAct(void) const
