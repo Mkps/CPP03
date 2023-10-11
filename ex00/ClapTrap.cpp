@@ -14,32 +14,43 @@ ClapTrap::ClapTrap(std::string name)
 	std::cout << "A ClapTrap named " << this->_name << " appears..." << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap &src)
-	: _name(src.getName()), _hitP(src.getHP()), _energyP(src.getEnergy()), _attackDamage(src.getAttack()) 
+ClapTrap::ClapTrap(ClapTrap const &src)
 {
+	*this = src;
 	std::cout << "ClapTrap " << this->_name << " cloned itself :O" << std::endl;
 }
 
+ClapTrap	&ClapTrap::operator =(ClapTrap const &rhs)
+{
+	if (!this->getName().empty())
+		std::cout << this->getName() << " becomes " << rhs.getName() << std::endl;
+	this->_name = rhs.getName();
+	this->_hitP = rhs.getHP();
+	this->_energyP = rhs.getEnergy();
+	this->_attackDamage = rhs.getAttack();
+
+	return (*this);
+}
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << this->_name << " goes away...\nGoodbye " << this->_name << std::endl;
+	std::cout << this->_name << " goes away..." << std::endl;
 
 }
-std::string	ClapTrap::getName(void)
+std::string	ClapTrap::getName(void) const
 {
 	return (this->_name);
 }
-unsigned int	ClapTrap::getHP(void)
+unsigned int	ClapTrap::getHP(void) const
 {
 	return (this->_hitP);
 }
 	
-unsigned int	ClapTrap::getEnergy(void)
+unsigned int	ClapTrap::getEnergy(void) const
 {
 	return (this->_energyP);
 }
 
-unsigned int	ClapTrap::getAttack(void)
+unsigned int	ClapTrap::getAttack(void) const
 {
 	return (this->_attackDamage);
 }

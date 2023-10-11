@@ -6,5 +6,7 @@ int	main(void)
 	ClapTrap	norminou("Norminou");
 	ClapTrap	clone(norminou);
 
+	wild = norminou;
+
 	return (0);
 }

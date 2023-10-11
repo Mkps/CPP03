@@ -8,19 +8,18 @@ class ClapTrap {
 public:
 	ClapTrap();
 	ClapTrap(std::string);
-	ClapTrap(ClapTrap &);
-	ClapTrap &operator=(ClapTrap &);
-	ClapTrap &operator=(const ClapTrap &);
+	ClapTrap(ClapTrap const &);
+	ClapTrap &operator=(ClapTrap const &);
 	~ClapTrap();
 
 	void	attack(std::string const & target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
-	std::string		getName(void);
-	unsigned int	getHP(void);
-	unsigned int	getEnergy(void);
-	unsigned int	getAttack(void);
+	std::string		getName(void) const;
+	unsigned int	getHP(void) const;
+	unsigned int	getEnergy(void) const;
+	unsigned int	getAttack(void) const;
 
 
 private:
