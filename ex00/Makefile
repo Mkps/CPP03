@@ -19,7 +19,7 @@ INC_DIR = ./
 OBJ_DIR = build/
 
 SRC_FILES = main.cpp \
-			CloapTrap.cpp \
+			ClapTrap.cpp \
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 
