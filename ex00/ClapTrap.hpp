@@ -15,7 +15,12 @@ public:
 	void	attack(std::string const & target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+	void	msgNoEnergy(void) const;
+	void	msgNoHP(void) const;
 
+	bool 			canAct(void) const;
+	bool 			hasEnoughHP(void) const;
+	bool 			hasEnoughEnergy(void) const;
 	std::string		getName(void) const;
 	unsigned int	getHP(void) const;
 	unsigned int	getEnergy(void) const;
