@@ -1,4 +1,5 @@
 #include "ClapTrap.hpp"
+#include <iostream>
 
 ClapTrap::ClapTrap()
 	: _hitP(10), _energyP(10), _attackDamage(0) 
@@ -66,6 +67,18 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->_hitP += amount;
 }
 
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	if (!this->hasEnoughHP())
+	{
+		std::cout << "Stop it! He's already dead..." << std::endl;
+		return ;
+	}
+	std::cout << "ClapTrap " << this->getName() << " has taken ";
+	std::cout << amount << " points of damage!" << std::endl;
+	this->_hitP -= amount;
+}
+
 bool	ClapTrap::canAct(void) const
 {
 	if (!this->hasEnoughHP())
@@ -94,6 +107,7 @@ std::string	ClapTrap::getName(void) const
 {
 	return (this->_name);
 }
+
 unsigned int	ClapTrap::getHP(void) const
 {
 	return (this->_hitP);
