@@ -1,4 +1,5 @@
 #include "ClapTrap.hpp"
+#include <string>
 
 ClapTrap::ClapTrap()
 	: _hitP(10), _energyP(10), _attackDamage(0) 
@@ -11,6 +12,12 @@ ClapTrap::ClapTrap(std::string name)
 	: _hitP(10), _energyP(10), _attackDamage(0) 
 {
 	this->_name = name; 
+	std::cout << "A ClapTrap named " << this->_name << " appears..." << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name, unsigned int hp_amount, unsigned int energy_amount, unsigned int attack_damage)
+	: _name(name), _hitP(hp_amount), _energyP(energy_amount), _attackDamage(attack_damage) 
+{
 	std::cout << "A ClapTrap named " << this->_name << " appears..." << std::endl;
 }
 
@@ -126,4 +133,24 @@ unsigned int	ClapTrap::getEnergy(void) const
 unsigned int	ClapTrap::getAttack(void) const
 {
 	return (this->_attackDamage);
+}
+
+void	ClapTrap::setName(std::string const & name)
+{
+	this->_name = name;
+}
+
+void	ClapTrap::setHP(unsigned int amount)
+{
+	this->_hitP = amount;
+}
+
+void	ClapTrap::setEnergy(unsigned int amount)
+{
+	this->_energyP = amount;
+}
+
+void	ClapTrap::setAttack(unsigned int amount)
+{
+	this->_attackDamage = amount;
 }

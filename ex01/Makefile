@@ -20,6 +20,7 @@ OBJ_DIR = build/
 
 SRC_FILES = main.cpp \
 			ClapTrap.cpp \
+			ScavTrap.cpp \
 
 SRC = $(addprefix $(SRC_DIR), $(SRC_FILES))
 

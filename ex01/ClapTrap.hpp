@@ -7,6 +7,7 @@ class ClapTrap {
 public:
 	ClapTrap();
 	ClapTrap(std::string);
+	ClapTrap(std::string, unsigned int, unsigned int, unsigned int);
 	ClapTrap(ClapTrap const &);
 	ClapTrap &operator=(ClapTrap const &);
 	~ClapTrap();
@@ -20,12 +21,17 @@ public:
 
 	bool 	canAct(void) const;
 	bool 	hasEnoughHP(void) const;
-	bool 	hasEnoughEnergy(void) const;
+	bool	hasEnoughEnergy(void) const;
 
 	std::string		getName(void) const;
 	unsigned int	getHP(void) const;
 	unsigned int	getEnergy(void) const;
 	unsigned int	getAttack(void) const;
+
+	void	setName(std::string const & name);
+	void	setHP(unsigned int amount);
+	void	setEnergy(unsigned int amount);
+	void	setAttack(unsigned int amount);
 
 
 private:
