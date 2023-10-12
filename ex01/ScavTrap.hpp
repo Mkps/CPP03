@@ -12,7 +12,7 @@ public:
 	~ScavTrap();
 	ScavTrap &operator =(ScavTrap const & rhs);
 
-	void	atteck(std::string const & target);
+	void	attack(std::string const & target);
 	void	guardGate(void);
 
 private:

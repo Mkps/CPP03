@@ -35,3 +35,12 @@ ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap " << this->getName() << " goes away..." << std::endl;
 }
+
+void	ScavTrap::attack(std::string const &target)
+{
+	if (!this->canAct())
+		return ;
+	this->setEnergy(this->getEnergy() - 1);
+	std::cout << "ScavTrap " << this->getName() << " attacks " << target << ", causing ";
+	std::cout << this->getAttack() << " points of damage!" << std::endl;
+}
