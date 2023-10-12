@@ -11,7 +11,12 @@ int	main(void)
 
 	shinyTrap.attack("Norminator");
 	shinyTrap.ClapTrap::showStatus();
+	shinyTrap.beRepaired(10);
 	shinyTrap.showStatus();
+	shinyTrap.whoAmI();
+	shinyTrap.highFivesGuys();
+	shinyTrap.guardGate();
+	shinyTrap.guardGate();
 	norminator.showStatus();
 	norminou.attack("the Sun");
 	norminator.attack("the Sun");
