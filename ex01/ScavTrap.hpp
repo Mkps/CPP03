@@ -16,6 +16,7 @@ public:
 	void	guardGate(void);
 
 private:
+	bool	_isGuardingGate;
 	
 };
 
