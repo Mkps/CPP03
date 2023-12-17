@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
+/*   By: aloubier <aloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 12:13:59 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 12:14:00 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:25:48 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ ScavTrap::ScavTrap()
 	: ClapTrap("Wild ScavTrap", 100, 50, 20)
 {
 	this->_isGuardingGate = 0;
-	std::cout << "ScavTrap named " << this->getName() << "constructed" << std::endl;
+	std::cout << "A ScavTrap named " << this->getName() << " appears" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
 	: ClapTrap(name, 100, 50, 20)
 {
 	this->_isGuardingGate = 0;
-	std::cout << "ScavTrap named " << this->getName() << " constructed" << std::endl;
+	std::cout << "A ScavTrap named " << this->getName() << " appears" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &src)

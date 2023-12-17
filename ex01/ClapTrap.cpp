@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
+/*   By: aloubier <aloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 12:13:40 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 12:13:40 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/17 18:26:49 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ ClapTrap	&ClapTrap::operator =(ClapTrap const &rhs)
 }
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << this->_name << " goes away..." << std::endl;
+	std::cout << "ClapTrap " << this->_name << " goes away..." << std::endl;
 }
 
 void	ClapTrap::msgNoEnergy(void) const
