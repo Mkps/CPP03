@@ -13,9 +13,8 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-	: _hitP(10), _energyP(10), _attackDamage(0) 
+	: _name("Wild ClapTrap"), _hitP(10), _energyP(10), _attackDamage(0) 
 {
-	this->_name = "Wild ClapTrap";
 	std::cout << "A Wild ClapTrap appears..." << std::endl;
 }
 

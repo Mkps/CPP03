@@ -27,20 +27,19 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	void	showStatus(void) const;
-	void	msgNoEnergy(void) const;
-	void	msgNoHP(void) const;
-
-	bool 	canAct(void) const;
-	bool 	hasEnoughHP(void) const;
-	bool 	hasEnoughEnergy(void) const;
 
 	std::string		getName(void) const;
 	unsigned int	getHP(void) const;
 	unsigned int	getEnergy(void) const;
 	unsigned int	getAttack(void) const;
 
-
 private:
+	bool 	canAct(void) const;
+	bool 	hasEnoughHP(void) const;
+	bool 	hasEnoughEnergy(void) const;
+	void	msgNoEnergy(void) const;
+	void	msgNoHP(void) const;
+
 	std::string		_name;
 	unsigned int	_hitP;
 	unsigned int	_energyP;
