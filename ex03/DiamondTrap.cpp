@@ -31,6 +31,7 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_hitP = FragTrap::_hitP;
 	this->_energyP = ScavTrap::_energyP;
 	this->_attackDamage = FragTrap::_attackDamage;
+	std::cout << "inherited values "<< FragTrap::_hitP << " " << FragTrap::_energyP << " " << ScavTrap::_attackDamage << std::endl;
 	std::cout << "DiamondTrap named " << this->_name << " constructed" << std::endl;
 }
 
@@ -54,6 +55,7 @@ DiamondTrap	&DiamondTrap::operator =(DiamondTrap const &rhs)
 	this->setHP(rhs.getHP());
 	this->setEnergy(rhs.getEnergy());
 	this->setAttack(rhs.getAttack());
+    this->_isGuardingGate = rhs._isGuardingGate;
 
 	return (*this);
 }
@@ -68,15 +70,11 @@ DiamondTrap::~DiamondTrap(void)
 // Overrides others
 void	DiamondTrap::attack(std::string const &target)
 {
-	if (!this->canAct())
-		return ;
-	this->setEnergy(this->getEnergy() - 1);
-	std::cout << "DiamondTrap " << this->_name << " attacks " << target << ", causing ";
-	std::cout << this->_attackDamage << " points of damage!" << std::endl;
+    this->ScavTrap::attack(target);
 }
 
 // Overrides ClapTrap::showStatus(void)
-void	DiamondTrap::showStatus(void) const
+void	DiamondTrap::showStatus(void) const 
 {
 	std::cout << "DiamondTrap " << this->_name ;
 	std::cout << " HP: "<< this->_hitP;
@@ -85,6 +83,6 @@ void	DiamondTrap::showStatus(void) const
 
 void	DiamondTrap::whoAmI(void)
 {
-    std::cout << "Am I ClapTrap " << this->ClapTrap::getName() << " or DiamondTrap " << this->_name << ". Who am I???" << std::endl;
+    std::cout << "Am I ClapTrap " << this->ClapTrap::_name << " or DiamondTrap " << this->_name << ". Who am I???" << std::endl;
     std::cout << "* Smoke starts coming out of the DiamondTrap's BrainBox *" << std::endl;
 }

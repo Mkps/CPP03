@@ -22,18 +22,12 @@ public:
 	ClapTrap(std::string, unsigned int, unsigned int, unsigned int);
 	ClapTrap(ClapTrap const &);
 	ClapTrap &operator=(ClapTrap const &);
-	~ClapTrap();
+	virtual ~ClapTrap();
 
 	void	attack(std::string const & target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	virtual void	showStatus(void) const;
-	void	msgNoEnergy(void) const;
-	void	msgNoHP(void) const;
-
-	bool 	canAct(void) const;
-	bool 	hasEnoughHP(void) const;
-	bool	hasEnoughEnergy(void) const;
 
 	std::string		getName(void) const;
 	unsigned int	getHP(void) const;
@@ -47,6 +41,12 @@ public:
 
 
 protected:
+	void	msgNoEnergy(void) const;
+	void	msgNoHP(void) const;
+	bool 	canAct(void) const;
+	bool 	hasEnoughHP(void) const;
+	bool	hasEnoughEnergy(void) const;
+
 	std::string		_name;
 	unsigned int	_hitP;
 	unsigned int	_energyP;
