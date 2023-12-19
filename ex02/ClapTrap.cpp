@@ -3,19 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
+/*   By: aloubier <aloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 12:14:08 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 12:14:09 by aloubier         ###   ########.fr       */
+/*   Created: 2023/12/15 12:13:40 by aloubier          #+#    #+#             */
+/*   Updated: 2023/12/17 18:26:49 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-	: _hitP(10), _energyP(10), _attackDamage(0) 
+	: _name("Wild Claptrap"), _hitP(10), _energyP(10), _attackDamage(0) 
 {
-	this->_name = "Wild ClapTrap";
 	std::cout << "A Wild ClapTrap appears..." << std::endl;
 }
 
@@ -51,7 +50,7 @@ ClapTrap	&ClapTrap::operator =(ClapTrap const &rhs)
 }
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << this->_name << " goes away..." << std::endl;
+	std::cout << "ClapTrap " << this->_name << " goes away..." << std::endl;
 }
 
 void	ClapTrap::msgNoEnergy(void) const

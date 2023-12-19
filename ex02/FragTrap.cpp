@@ -15,13 +15,13 @@
 FragTrap::FragTrap()
 	: ClapTrap("Wild FragTrap", 100, 100, 30)
 {
-	std::cout << "FragTrap named " << this->getName() << "constructed" << std::endl;
+	std::cout << "A FragTrap named " << this->getName() << "appears" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
 	: ClapTrap(name, 100, 100, 30)
 {
-	std::cout << "FragTrap named " << this->getName() << " constructed" << std::endl;
+	std::cout << "A FragTrap named " << this->getName() << " appears..." << std::endl;
 }
 
 FragTrap::FragTrap(FragTrap const &src)

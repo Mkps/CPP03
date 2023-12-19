@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 12:14:13 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 12:14:13 by aloubier         ###   ########.fr       */
+/*   Created: 2023/12/15 12:13:45 by aloubier          #+#    #+#             */
+/*   Updated: 2023/12/15 12:13:45 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	void	showStatus(void) const;
-	void	msgNoEnergy(void) const;
-	void	msgNoHP(void) const;
-
-	bool 	canAct(void) const;
-	bool 	hasEnoughHP(void) const;
-	bool	hasEnoughEnergy(void) const;
 
 	std::string		getName(void) const;
 	unsigned int	getHP(void) const;
@@ -46,7 +40,13 @@ public:
 	void	setAttack(unsigned int amount);
 
 
-private:
+protected:
+	void	msgNoEnergy(void) const;
+	void	msgNoHP(void) const;
+	bool 	canAct(void) const;
+	bool 	hasEnoughHP(void) const;
+	bool	hasEnoughEnergy(void) const;
+
 	std::string		_name;
 	unsigned int	_hitP;
 	unsigned int	_energyP;
