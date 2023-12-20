@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aloubier <alex.loubiere@42.fr>             +#+  +:+       +#+        */
+/*   By: aloubier <aloubier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 12:14:04 by aloubier          #+#    #+#             */
-/*   Updated: 2023/12/15 12:14:04 by aloubier         ###   ########.fr       */
+/*   Updated: 2023/12/20 15:25:31 by aloubier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 	ScavTrap &operator =(ScavTrap const & rhs);
 
 	void	attack(std::string const & target);
-	void	guardGate(void);
+	void	guardGate();
 
 private:
 	bool	_isGuardingGate;
